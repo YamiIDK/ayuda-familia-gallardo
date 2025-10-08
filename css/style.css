@@ -33,6 +33,7 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    position: relative; /* Para posicionar el botón de idioma */
 }
 
 h1, h2 {
@@ -54,11 +55,34 @@ p { margin-bottom: 15px; }
     box-shadow: var(--box-shadow);
 }
 
+/* --- Botón de Idioma --- */
+.lang-toggle-btn {
+    position: absolute;
+    top: 15px; /* Ajustado para mejor visualización */
+    right: 15px; /* Ajustado para mejor visualización */
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.lang-toggle-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
 /* --- Header --- */
 header {
     background-color: var(--primary-color);
     color: var(--white-color);
-    padding: 40px 20px;
+    /* AUMENTAMOS EL PADDING SUPERIOR PARA EVITAR LA SUPERPOSICIÓN */
+    padding: 90px 20px 40px 20px; /* 90px arriba para dar espacio al botón y al título */
     text-align: center;
 }
 
@@ -275,4 +299,19 @@ footer {
     h2 { font-size: 1.5rem; }
     .content-section { padding: 25px; }
     .payment-options { grid-template-columns: 1fr; }
+    
+    /* En móvil, el botón se coloca de forma relativa sobre el título */
+    .lang-toggle-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin: 10px auto 20px auto;
+        width: fit-content;
+    }
+
+    /* Reducimos el padding superior del header en móvil para no dejar demasiado espacio vacío */
+    header {
+        padding: 40px 20px;
+    }
 }
