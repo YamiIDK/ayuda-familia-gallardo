@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURACIÓN DEL CONTADOR ---
     // CAMBIA ESTE VALOR cada vez que recibas una donación para actualizar la página.
     const meta = 5500;
-    let recaudado = 0; // <-- EDITA AQUÍ EL MONTO ACTUAL
+    let recaudado = 200; // <-- EDITA AQUÍ EL MONTO ACTUAL
 
     // --- CONFIGURACIÓN DE IDIOMA ---
     const langToggleBtn = document.getElementById('lang-toggle');
